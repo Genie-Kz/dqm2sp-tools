@@ -1,0 +1,115 @@
+name: 障害を報告する
+description: ツール、オンライン対戦、ランキング、クラウドセーブの障害を報告します
+title: "[障害] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        このIssueは公開されます。
+        Friend Code、復元キー、認証情報、セーブデータ、個人情報を入力しないでください。
+        ログや画像を添える場合は、必要な部分だけを切り出し、識別子を伏せてください。
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 問題が起きたもの
+      options:
+        - Android APKパッチャー
+        - Windowsセーブ取出ツール
+        - オンライン対戦・マッチング
+        - 段位戦・ランキング
+        - クラウドセーブ・クラウドロード
+        - 配布ZIP・説明書
+        - その他
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 使用した版
+      description: 配布ZIP名、パッチャー版、生成APKの版など、画面やファイル名で確認できるものを書いてください。
+      placeholder: 例：dqm2sp-tools-0.5.0、Androidパッチャー0.4.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 端末と環境
+      description: 端末名、Android版、Windows版、BlueStacks版とAndroid環境のうち、問題に関係する情報を書いてください。
+      placeholder: |
+        端末：
+        OS：
+        BlueStacksを使った場合の版とAndroid環境：
+    validations:
+      required: true
+
+  - type: input
+    id: occurred_at
+    attributes:
+      label: 発生日時
+      description: おおよその日時とタイムゾーンを書いてください。サーバー側の記録を確認するときに使います。
+      placeholder: 例：2026-08-30 19:30 JST
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際に起きたこと
+      description: 画面に表示された文言、止まった画面、直前に行った操作を具体的に書いてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待していた結果
+      description: どの画面へ進む、どのファイルが作られるなど、期待していた結果を書いてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 問題が起きるまでの操作を、最初から順番に書いてください。
+      placeholder: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 発生頻度
+      options:
+        - 毎回
+        - ときどき
+        - 1回だけ
+        - 未確認
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 追加情報
+      description: 同じ操作で成功した条件や、通信方法など、原因の切り分けに役立つ情報があれば書いてください。
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: public_information
+    attributes:
+      label: 公開情報の確認
+      options:
+        - label: Friend Code、復元キー、認証情報、セーブデータ、個人情報、未加工のログや画像を含めていません。
+          required: true
+        - label: 既存のIssueに同じ障害がないことを確認しました。
+          required: true
