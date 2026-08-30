@@ -33,6 +33,7 @@ GitHubが自動生成する「Source code (zip)」「Source code (tar.gz)」に�
 ## 障害を報告する
 
 障害を見つけた場合は、[障害報告フォーム](https://github.com/genie-kz/dqm2sp-tools/issues/new/choose)から報告してください。
+報告にはGitHubアカウントへのログインが必要です。
 
 Issueと添付内容は誰でも閲覧できます。
 Friend Code、復元キー、認証情報、セーブデータ、個人情報を投稿しないでください。
