@@ -31,7 +31,7 @@ body:
     attributes:
       label: 使用した版
       description: 配布ZIP名、パッチャー版、生成APKの版など、画面やファイル名で確認できるものを書いてください。
-      placeholder: 例：dqm2sp-tools-0.5.4、Androidパッチャー0.4.5
+      placeholder: 例：dqm2sp-tools-0.5.5、Androidパッチャー0.4.7
     validations:
       required: true
 
